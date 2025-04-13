@@ -139,5 +139,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 For inquiries, you can reach out via:
 
-- GitHub: [yourusername](https://github.com/Nabanyi)
+- GitHub: [@Nabanyi](https://github.com/Nabanyi)
 
