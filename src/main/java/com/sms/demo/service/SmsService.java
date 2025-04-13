@@ -16,9 +16,9 @@ import com.sms.demo.requestobjs.SmsRequest;
 @Service
 public class SmsService {
 
-	private static final String API_KEY = "mTZD06YEjOx0y317qipdttkS0"; 
-    private static final String SMS_URL = "https://api.mnotify.com/api/sms/quick?key=" + API_KEY;
-    private static final String BALANCE_URL = "https://api.mnotify.com/api/balance/sms?key=" + API_KEY;
+	private static final String API_KEY = "YOUR_API_KEY"; 
+    private static final String SMS_URL = "https://YOUR_SMS_URL_HERE/api/sms/quick?key=" + API_KEY;
+    private static final String BALANCE_URL = "https://YOUR_SMS_URL_HERE/api/balance/sms?key=" + API_KEY;
     
     private final RestTemplate restTemplate;
     
