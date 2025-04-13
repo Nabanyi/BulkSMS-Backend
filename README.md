@@ -3,7 +3,9 @@
 
 ## Overview
 
-This repository contains a simple Spring Boot application for managing and sending bulk SMS. It includes key features like user authentication, contact management, campaign creation, and SMS dispatch functionality. The API is designed to be lightweight and easy to integrate into existing systems.
+This repository contains a simple Spring Boot application for managing and sending bulk SMS. It includes key features like user authentication, contact management, campaign creation, and SMS dispatch functionality. 
+
+The API is designed to be lightweight and easy to integrate into existing systems. Feel free to adapt this template to suit your project more closely! Let me know if you'd like to explore any of these sections in greater detail.
 
 
 ## Features
@@ -16,12 +18,15 @@ This repository contains a simple Spring Boot application for managing and sendi
 
 - **Send Bulk SMS:** Send SMS to multiple recipients in a single operation.
 
+- **Dynamic Campaign Message:** Send customised sms based on the data uploaded.
+
+
 
 ## Technologies Used
 
 - **Backend Framework:** Spring Boot
 
-- **Database:** MySQL/PostgreSQL (choose based on your setup)
+- **Database:** MySQL
 
 - **Authentication:** JWT (JSON Web Tokens)
 
@@ -33,20 +38,20 @@ This repository contains a simple Spring Boot application for managing and sendi
 
   - Hibernate
 
-  - Twilio (or another SMS provider integration)
+  - Use your SMS provider
 
 
 ## Prerequisites
 
 Before running this project, ensure you have:
 
-- Java 11 or later installed
+- Java 21 or later installed
 
 - Maven installed
 
-- A database setup (e.g., MySQL, PostgreSQL)
+- A database setup (e.g., MySQL)
 
-- An SMS provider account (e.g., Twilio) with API credentials
+- An SMS provider account with API credentials
 
 
 ## Installation
@@ -55,7 +60,7 @@ Before running this project, ensure you have:
 
    ```bash
 
-   git clone https://github.com/yourusername/bulk-sms-api.git
+   git clone https://github.com/Nabanyi/BulkSMS-Backend.git
 
    ```
 
@@ -63,7 +68,7 @@ Before running this project, ensure you have:
 
    ```bash
 
-   cd bulk-sms-api
+   cd BulkSMS-Backend
 
    ```
 
@@ -79,17 +84,23 @@ Before running this project, ensure you have:
 
    spring.datasource.password=yourpassword
 
+   ```
+
+4. Configure the database and SMS provider in `/service/SmsService.java`:
+
+   ```SmsService
 
    # SMS provider credentials
 
-   sms.provider.api_key=yourapikey
+   API_KEY=yourapikey
 
-   sms.provider.api_secret=yoursecret
+   SMS_URL=URL
+
+   BALANCE_URL=URL
 
    ```
 
-
-4. Build the project:
+5. Build the project:
 
    ```bash
 
@@ -98,7 +109,7 @@ Before running this project, ensure you have:
    ```
 
 
-5. Run the application:
+6. Run the application:
 
    ```bash
 
@@ -110,21 +121,8 @@ Before running this project, ensure you have:
 ## API Endpoints
 
 Below are some of the key endpoints provided by this API:
+<img src="swagger-ui.png" alt="Bulk SMS Api">
 
-
-| Endpoint                 | Method | Description                     |
-
-|--------------------------|--------|---------------------------------|
-
-| `/auth/login`            | POST   | Authenticate user              |
-
-| `/contacts`              | GET    | Retrieve all contacts          |
-
-| `/contacts`              | POST   | Add a new contact              |
-
-| `/campaigns`             | POST   | Create a new SMS campaign       |
-
-| `/sms/send`              | POST   | Send bulk SMS                  |
 
 
 ## Contributing
@@ -141,12 +139,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 For inquiries, you can reach out via:
 
-- Email: your-email@example.com
+- GitHub: [yourusername](https://github.com/Nabanyi)
 
-- GitHub: [yourusername](https://github.com/yourusername)
-
-
----
-
-
-Feel free to adapt this template to suit your project more closely! Let me know if you'd like to explore any of these sections in greater detail.
